@@ -1,0 +1,16 @@
+{
+    "name": "ula-token-sale",
+    "description": "Ula Token Sale ICO",
+    "main": "truffle-config.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "dev": "lite-server"
+    },
+    "author": "UlaKal",
+    "license": "ISC",
+    "devDependencies": {
+        "lite-server": "^2.3.0"
+    }
+}

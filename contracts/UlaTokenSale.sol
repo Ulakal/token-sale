@@ -6,6 +6,7 @@ contract UlaTokenSale {
     address admin;
     UlaToken public tokenContract;
     uint256 public tokenPrice;
+    uint256 public tokensSold;
 
     event Sell(address buyer, uint256 amount);
 
@@ -16,10 +17,19 @@ contract UlaTokenSale {
     }
 
     function buyTokens(uint256 _numberOfTokens) public payable {
-        require(msg.value >= _numberOfTokens*tokenPrice);
-        require(_numberOfTokens <= tokenContract.balanceOf(address(this)));
-        tokenContract.transfer(msg.sender, _numberOfTokens);
+        require(msg.value >= _numberOfTokens * tokenPrice);
+        require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);
+        require(tokenContract.transfer(msg.sender, _numberOfTokens));
+
+        tokensSold += _numberOfTokens;
         
         emit Sell(msg.sender, _numberOfTokens);
+    }
+
+    function endSale() public {
+        require(msg.sender == admin);
+        require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
+
+        selfdestruct(msg.sender);
     }
 }

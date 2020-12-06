@@ -1,4 +1,4 @@
-/*const { assert } = require("chai");
+const { assert } = require("chai");
 const truffleAssert = require('truffle-assertions');
 
 const UlaToken = artifacts.require("UlaToken");
@@ -86,5 +86,5 @@ contract('UlaToken', (accounts) => {
         assert.equal(event.to, accounts[2])
         assert.equal(event.value, '30')
     })
-})*/
+})
 
