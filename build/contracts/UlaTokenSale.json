@@ -3203,6 +3203,31 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {
+        "0x5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df09": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "buyer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Sell",
+          "type": "event",
+          "signature": "0x5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df09"
+        }
+      },
+      "links": {},
+      "address": "0x97f53828A9AdDf0Fad6472d0fc39702eB68bFE8c",
+      "transactionHash": "0x0fb062bb88d513782a07bd4e00eb84bb3a7e4dd3bd11adf1eb1a2ac0ea44536e"
+    },
     "5777": {
       "events": {
         "0x5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df09": {
@@ -3225,12 +3250,12 @@
         }
       },
       "links": {},
-      "address": "0xb535F74E65F540f16De9Ef0C8D585925f2277a0C",
-      "transactionHash": "0x8b1265dfd16a82808028a1fef2cfb23cfc58527d4c6b6e2f4a65e63514730a54"
+      "address": "0x5fc3FF22A7eaAD18552F460B730bF7503F503fa6",
+      "transactionHash": "0xff51b54c98d5f06a249fc7ecbef8b099f52851d0c2fd963a4c7fd0f4f8926d9c"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2020-12-06T18:45:25.423Z",
+  "updatedAt": "2020-12-07T22:27:35.921Z",
   "devdoc": {
     "methods": {}
   },

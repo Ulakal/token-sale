@@ -4900,6 +4900,59 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Transfer",
+          "type": "event",
+          "signature": "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+        },
+        "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "value",
+              "type": "uint256"
+            }
+          ],
+          "name": "Approval",
+          "type": "event",
+          "signature": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
+        }
+      },
+      "links": {},
+      "address": "0xB59434C175962Afd9137173f36D5970D512Ce2b9",
+      "transactionHash": "0x04a9de7c42399818f3e97cf6c162808fa2b1e7d224d5bd5e75ef99fd78d96454"
+    },
     "5777": {
       "events": {
         "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
@@ -4950,12 +5003,12 @@
         }
       },
       "links": {},
-      "address": "0xfC932b99A5576ec6bbF371b438100eFd4965217c",
-      "transactionHash": "0x3c235aaa77ff93f647a64b8a60fd559339feeab938565b85ebf51c93b6bf3fa0"
+      "address": "0x39f457D34f558699ec7dC3a1f6B6A8109cf7684e",
+      "transactionHash": "0xde2a559349f8eb80718ed71dc8fd1cc3e88e6dc14195c17942edf58033ad1dc6"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2020-12-06T18:45:25.418Z",
+  "updatedAt": "2020-12-07T22:27:35.905Z",
   "devdoc": {
     "methods": {}
   },
