@@ -16,6 +16,7 @@ App = {
         if(typeof web3 !== 'undefined') {
             App.web3Provider = web3.currentProvider;
             web3 = new Web3(web3.currentProvider);
+            window.ethereum.enable();
         } else {
             App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
             web3 = new Web3(App.web3Provider);
@@ -91,7 +92,7 @@ App = {
             $('.tokens-sold').html(App.tokensSold)
             $('.tokens-available').html(App.tokensAvailable)
 
-            var progressPercent = (App.tokensSold / App.tokensAvailable) * 100;
+            var progressPercent = Math.ceil((App.tokensSold) / App.tokensAvailable) * 100;
             $('#progress').css('width', progressPercent + '%');
 
             App.contracts.UlaToken.deployed().then(function(instance) {
