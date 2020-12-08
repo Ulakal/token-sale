@@ -1,7 +1,9 @@
 pragma solidity ^0.5.0;
 import "./UlaToken.sol";
+import "./SafeMath.sol";
 
 contract UlaTokenSale {
+    using SafeMath for uint256;
 
     address admin;
     UlaToken public tokenContract;
@@ -21,7 +23,7 @@ contract UlaTokenSale {
         require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);
         require(tokenContract.transfer(msg.sender, _numberOfTokens));
 
-        tokensSold += _numberOfTokens;
+        tokensSold = SafeMath.add(tokensSold, _numberOfTokens);
         
         emit Sell(msg.sender, _numberOfTokens);
     }
