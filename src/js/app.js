@@ -5,7 +5,7 @@ App = {
     loading: false,
     tokenPrice: '',
     tokensSold: '',
-    tokensAvailable: '750000',
+    tokensAvailable: '500000',
 
     init: function() {
         console.log("app initialized")
@@ -46,7 +46,10 @@ App = {
 
     listenForEvents: function() {
         App.contracts.UlaTokenSale.deployed().then(function(instance) {
-            instance.Sell({}, {
+            instance.Sell({
+            filter: {buyer: App.account}
+        }, 
+        {
             fromBlock: 0,
             toBlock: 'latest',
         }).watch(function(err, event) {
